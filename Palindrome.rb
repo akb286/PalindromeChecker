@@ -5,21 +5,18 @@
 # DO NOT USE any STRING helper methods like .reverse this is a coding challenge to see how you would write all of the code to do this!
 # Have your script go in a loop or a recursive method call so the user can keep checking palindromes.
 
-@text
-
-puts "Provide a word: "
-user_input = gets.strip.downcase
-
-
-def rever(text)
- puts text.reverse
- puts @text
-end
-
-def palindrome(text)
-  if text.reverse == text
-    puts "The text #{text} is a palindrome"
-  else
-    puts "the text #{text} isn NOT a palindrome"
+def rev_string
+  puts "please enter a string and I will check to see if its a pallindrome"
+  string = gets.strip.downcase
+  splits = string.split("")
+  puts "thank you. checking............"
+  rev = []
+  string.size.times {rev << splits.pop}
+  rev.join
+  if rev.join == string
+    puts "NICE!  totally a pallindrome"
+  else puts " hmmm looks like its not a pallindrome"
   end
+
 end
+  puts rev_string
